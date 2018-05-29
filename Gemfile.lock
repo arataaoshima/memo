@@ -63,6 +63,7 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     gretel (3.0.9)
       rails (>= 3.1.0)
     i18n (0.9.5)
@@ -172,6 +173,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-rails
+  google-analytics-rails
   gretel
   jbuilder (~> 2.0)
   jquery-rails
