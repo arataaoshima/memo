@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+   <nav class="navbar navbar-expand-xl bg-info">
+    <a class="navbar-brand">Rails Memo</a>
+    <ul class="navbar-nav text-align-left">
+        <li class="bg-success navbar-item list-style-none pr-2"><a class="nav-link" href="/">Home</a></li>
+        <li class="bg-success navbar-item"><a class="nav-link" href="/post/index">Index</a></li>
+        <li class="bg-success navbar-item"><a class="nav-link" href="/post/new">Create New</a></li>
+    </ul>
+</nav>
+  <p><%= breadcrumbs separator: " &rsaquo; " %></p> 
+<%= yield %>
+
+<footer>
+     <div class="text-center">
+        <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-sm btn-fb mx-1" href="https://www.facebook.com/arata.aoshima" target="_blank">
+                    <i class="fa fa-facebook fa-2x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-sm btn-tw mx-1" >
+                    <i class="fa fa-twitter fa-2x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-sm btn-gplus mx-1">
+                    <i class="fa fa-google-plus fa-2x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-sm btn-li mx-1"  href="https://www.linkedin.com/in/aoshima-arata" target="_blank">
+                    <i class="fa fa-linkedin fa-2x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-sm btn-dribbble mx-1">
+                    <i class="fa fa-dribbble fa-2x"> </i>
+                </a>
+            </li>
+        </ul>
+    </div>
+ <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright: 
+        <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> Arata Aoshima </a>
+    </div>
+  </footer>
+</body>
+</html>

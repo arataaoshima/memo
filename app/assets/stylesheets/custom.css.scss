@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+.link-to-text-color-black{
+    color:black;
+}
+
+
+.link-to-text-color-white{
+    color:white;
+}
+
+.container {
+    height:500px;
+}
+
+li {
+    list-style:none;
+    margin-top:15px;
+    margin-right:10px;
+    padding-right:30px;
+}
+
+.fa-twitter{
+    color:#55acee;
+}
+
+.fa-facebook{
+    color:#315096;
+}
+
+.fa-google-plus{
+    color:#dd4b39;
+}
+
+.fa-linkedin{
+    color:#0079ba
+}

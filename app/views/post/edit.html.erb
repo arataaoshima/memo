@@ -1,0 +1,16 @@
+<div class="container">
+
+<% breadcrumb :post_edit %>
+    
+<h1>Edit the Article</h1>
+<%= form_tag("/post/update/#{@post.id}") do %>
+<div class="mb-3">
+<input name="post" value="<%= @post.post %>" class="form-control">
+</div>
+</br>
+<textarea name="description" class="form-control" rows=8><%= @post.description %></textarea>
+</br>
+<input value="submit" type="submit" class="btn btn-info">
+
+<% end %>
+</div>
