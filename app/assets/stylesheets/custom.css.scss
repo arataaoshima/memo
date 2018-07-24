@@ -13,7 +13,8 @@
 }
 
 .container {
-    height:500px;
+    height:800px;
+    text-align:center;
 }
 
 li {
@@ -37,4 +38,17 @@ li {
 
 .fa-linkedin{
     color:#0079ba
+}
+
+#detail {
+    margin: 0 auto;
+}
+
+.index-button{
+    margin-top:15px;
+    
+}
+
+.home-title{
+    margin-bottom:30px;
 }
