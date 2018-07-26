@@ -1,6 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+  font-family: 'azuki';
+  src: font-url("/assets/azuki.eot");
+  src: font-url("/assets/azuki.woff") format("woff"), font-url("/assets/azuki.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 .link-to-text-color-black{
@@ -13,6 +20,7 @@
 }
 
 .container {
+    font-family: 'azuki', 'Noto Sans Japanese','Yu Gothic',YuGothic,sans-serif;
     height:800px;
     text-align:center;
 }
