@@ -1,8 +1,16 @@
 <div class="container">
     <%= breadcrumbs %>
-<h1 class="text-center home-title">Rails Memo</h1>
-
-<a class="btn btn-default" href="/post/index" role="button">Go Back to Index</a>
-<a class="btn btn-default" href="/post/new" role="button">Create New</a>
-
+    
+    <h1 class="text-center home-title">Welcome to Rails Memo</h1>
+    
+    <div class="search-wrapper">
+    <%= form_tag post_index_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+      <p>
+        <%= text_field_tag :search, params[:search], class:"form-control search-box" %>
+        <%= submit_tag "Search", :name => nil, :class =>"btn btn-info search-button" %>
+      </p>
+    <% end %>
+    </div>
+       <a class="btn btn-default" href="/post/index" role="button">Go Back to Index</a>
+    <a class="btn btn-default" href="/post/new" role="button">Create New</a>
 </div>
