@@ -11,6 +11,8 @@ class PostController < ApplicationController
         @post = Post.new
         @post.post = params[:post]
         @post.description = params[:description]
+        
+        @post.category_ids = params[:category_ids]
         @post.save
         redirect_to("/post/index")
     end
@@ -20,9 +22,13 @@ class PostController < ApplicationController
     end
     
     def update
+     
         @post = Post.find_by(id: params[:id])
         @post.post = params[:post]
         @post.description = params[:description]
+        #category_params = params[:category_ids]
+        @post.category_ids = params[:category_ids]
+        
         @post.save
         redirect_to("/post/index")
     end

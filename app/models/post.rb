@@ -6,5 +6,8 @@ class Post < ActiveRecord::Base
           Post.all #全て表示。
         end
       end
+      
+      has_many :post_categories
+      has_many :categories, through: :post_categories
 
 end

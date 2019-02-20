@@ -10,7 +10,22 @@
 </br>
 <textarea name="description" class="form-control" rows=8><%= @post.description %></textarea>
 </br>
-<input value="submit" type="submit" class="btn btn-info">
+  <% Category.all.each do |c| %>
+  <input type="checkbox" name="category_ids[]" value="<%= c.id %>"><%= c.title %>
+ <% end %></br>
 
+  <input value="submit" type="submit" class="btn btn-info">
 <% end %>
+
 </div>
+
+
+<h1>プログラミング言語</h1>
+
+ 
+
+ 
+  <% Category.all.each do |c| %>
+<%= check_box_tag :category_ids, c.id %>
+<%= label_tag :sample1, c.title %>
+ <% end %>

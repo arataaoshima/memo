@@ -3,7 +3,9 @@
     <% breadcrumb :post_show %>
 
 <h3>Detail Page</h3>
-
+<% @post.categories.each do |c| %>
+<div class="btn btn-success"><%= c.title %></div>
+<% end %>
 <div class="row">
 <div class="col col-8 bg-primary">Title: <%= @post.post %></div>
 <textarea class="form-control" readonly rows=30><%= @post.description %></textarea>
