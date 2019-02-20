@@ -1,27 +1,28 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Listing Categories</h1>
 
-<table>
+
+
+<table class="table table-dark row">
   <thead>
     <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
+      <th scope="col-6">Title</th>
+      <th scope="col-2">Posts</th>
+      <th scope="col-2">Edit</th>
+      <th scope="col-2">Delete</th>
     </tr>
   </thead>
-
   <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.title %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% @categories.each do |category| %>
+    <tr>
+      <th scope="row"><%= category.title %></th>
+      <td><%= link_to "See Posts", "/categories/post/#{category.id}" %></td>
+      <td><%= link_to 'Edit', edit_category_path(category) %></td>
+      <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+<div class="btn btn-primary"><%= link_to 'New Category', new_category_path %></div>
+</div>

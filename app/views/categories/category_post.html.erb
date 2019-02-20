@@ -1,0 +1,7 @@
+<div class="container">
+<h1>Post about <%= @category.title %></h1>
+
+<% @category.posts.each do |post| %>
+<div class="btn btn-primary"><%= link_to post.post, "/post/show/#{post.id}" %></div></br>
+<% end %>
+</div>
