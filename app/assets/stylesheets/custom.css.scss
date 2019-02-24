@@ -36,8 +36,16 @@ li {
     color:#55acee;
 }
 
+.fa-twitter:hover{
+    opacity: 0.9;
+}
+
 .fa-facebook{
     color:#315096;
+}
+
+.fa-facebook:hover{
+    opacity: 0.9;
 }
 
 .fa-google-plus{
@@ -46,6 +54,10 @@ li {
 
 .fa-linkedin{
     color:#0079ba
+}
+
+.fa-linkedin:hover{
+    opacity: 0.9;
 }
 
 #detail {
@@ -80,4 +92,33 @@ li {
     
     margin-top: 30px;
     margin-bottom: 150px;
+}
+
+.nav-link:hover {
+    text-decoration:none;
+    background-color: rgba(255,0,0,0);
+    color:black;
+}
+
+.navbar-brand:hover {
+      text-decoration:none;
+    background-color: rgba(255,0,0,0);
+}
+
+.list-inline-item:hover {
+    background-color: rgba(255,0,0,0);
+}
+
+.btn-floating:hover {
+     background-color: rgba(255,0,0,0);
+}
+
+.home-wrapper {
+    background-image: url("/cpu.jpeg");
+    background-size: cover;
+}
+
+footer {
+    //background-color: transparent;
+    background: rgba(255,0,0,0);
 }

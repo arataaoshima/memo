@@ -1,7 +1,37 @@
 <div class="container">
 <h1>Post about <%= @category.title %></h1>
 
-<% @category.posts.each do |post| %>
-<div class="btn btn-primary"><%= link_to post.post, "/post/show/#{post.id}" %></div></br>
-<% end %>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Article Title</th>
+            <th scope="col">Detail</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @category.posts.each do |post| %>
+        <tr scope="row">
+            <td><%= post.id %></td>
+            <td><%= post.post %></td>
+            <td><%= link_to("Detail","/post/show/#{post.id}", class: 'link-to-text-color-black') %></td>
+            
+            <td>
+                <div class="btn btn-primary">
+                <%= link_to("Edit","/post/edit/#{post.id}",class: "link-to-text-color-white") %>
+                </div>
+            </td>
+            
+            <td>
+                <div class="btn btn-danger">
+                <%= link_to("Delete","/post/delete/#{post.id}",{method: "post",class: "link-to-text-color-white"}) %>
+                </div>
+            </td>
+        </tr>
+         <% end %>
+    </tbody>
+</table>
 </div>
