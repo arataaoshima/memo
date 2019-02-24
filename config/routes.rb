@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
+devise_for :users, :controllers => {
+  :sessions      => "users/sessions"
+}
   resources :categories
   get 'categories/post/:id' => 'categories#category_post'
   # The priority is based upon order of creation: first created -> highest priority.
