@@ -8,8 +8,10 @@
             <th scope="col">Number</th>
             <th scope="col">Article Title</th>
             <th scope="col">Detail</th>
+            <% if user_signed_in? %>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <% end %>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +20,7 @@
             <td><%= post.id %></td>
             <td><%= post.post %></td>
             <td><%= link_to("Detail","/post/show/#{post.id}", class: 'link-to-text-color-black') %></td>
-            
+            <% if user_signed_in? %>
             <td>
                 <div class="btn btn-primary">
                 <%= link_to("Edit","/post/edit/#{post.id}",class: "link-to-text-color-white") %>
@@ -30,6 +32,7 @@
                 <%= link_to("Delete","/post/delete/#{post.id}",{method: "post",class: "link-to-text-color-white"}) %>
                 </div>
             </td>
+            <% end %>
         </tr>
          <% end %>
     </tbody>

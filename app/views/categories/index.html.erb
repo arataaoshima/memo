@@ -9,8 +9,10 @@
     <tr>
       <th scope="col-6">Title</th>
       <th scope="col-2">Posts</th>
+      <% if user_signed_in? %>
       <th scope="col-2">Edit</th>
       <th scope="col-2">Delete</th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -18,11 +20,15 @@
     <tr>
       <th scope="row"><%= category.title %></th>
       <td><%= link_to "See Posts", "/categories/post/#{category.id}" %></td>
+      <% if user_signed_in? %>
       <td><%= link_to 'Edit', edit_category_path(category) %></td>
       <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
     </tr>
     <% end %>
   </tbody>
 </table>
+<% if user_signed_in? %>
 <div class="btn btn-primary"><%= link_to 'New Category', new_category_path %></div>
+<% end %>
 </div>
