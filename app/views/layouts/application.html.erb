@@ -9,9 +9,9 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-  
+
    <nav class="navbar navbar-expand-xl bg-secondary">
-    <a class="navbar-brand">Rails Memo</a>
+    <a class="navbar-brand" href="/">Rails Memo</a>
     <ul class="navbar-nav text-align-left">
         <li class="navbar-item list-style-none pr-2"><a class="nav-link" href="/">Home</a></li>
         <li class="navbar-item"><a class="nav-link" href="/post/index">ALL Posts</a></li>
@@ -22,7 +22,7 @@
     </ul>
 </nav>
 
-  <p><%= breadcrumbs separator: " &rsaquo; " %></p> 
+  <p><%= breadcrumbs separator: " &rsaquo; " %></p>
 <%= yield %>
 
 <footer>
@@ -48,11 +48,11 @@
                     <i class="fa fa-linkedin fa-2x"> </i>
                 </a>
             </li>
-           
+
         </ul>
     </div>
  <div class="footer-copyright py-3 text-center fixed-bottom">
-        © 2019 Copyright: 
+        © 2019-2020 Copyright:
        Arata Aoshima
     </div>
   </footer>

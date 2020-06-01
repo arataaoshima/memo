@@ -1,6 +1,6 @@
 <div class="home-wrapper">
      <nav class="navbar navbar-expand-xl bg-secondary">
-      <a class="navbar-brand">Rails Memo</a>
+      <a class="navbar-brand" href="/">Rails Memo</a>
       <ul class="navbar-nav text-align-left">
           <li class="navbar-item list-style-none pr-2"><a class="nav-link" href="/">Home</a></li>
           <li class="navbar-item"><a class="nav-link" href="/post/index">ALL Posts</a></li>
@@ -19,11 +19,11 @@
     </nav>
   <div class="container">
       <%= breadcrumbs %>
-      
+
       <h1 class="text-center home-title">Welcome to Rails Memo</h1>
       <h3>Search by Keywords</h3>
       <div class="search-wrapper">
-      <%= form_tag post_index_path, :method => 'get' do %> 
+      <%= form_tag post_index_path, :method => 'get' do %>
         <p>
           <%= text_field_tag :search, params[:search], class:"form-control search-box" %>
           <%= submit_tag "Search", :name => nil, :class =>"btn btn-info search-button" %>
@@ -32,10 +32,12 @@
       </div>
       <div class="front-btn">
            <a class="btn btn-default" href="/post/index" role="button">Go to All Posts</a>
+           <% if user_signed_in? %>
            <a class="btn btn-default" href="/post/new" role="button">Create New</a>
+           <% end %>
       </div>
   </div>
-  
+
 <footer>
      <div class="text-center">
         <ul class="list-unstyled list-inline">
@@ -59,11 +61,11 @@
                     <i class="fa fa-linkedin fa-2x"> </i>
                 </a>
             </li>
-           
+
         </ul>
     </div>
  <div class="footer-copyright py-3 text-center fixed-bottom">
-        © 2019 Copyright: 
+        © 2019- 2020 Copyright:
        Arata Aoshima
     </div>
   </footer>
