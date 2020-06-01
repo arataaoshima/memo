@@ -134,6 +134,13 @@ li {
 .home-wrapper {
     background-image: url("/cpu.jpeg");
     background-size: cover;
+    height: auto;
+}
+@media screen and (min-width:1300px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+    .home-wrapper {
+        height: 840px;
+    }
 }
 
 footer {
